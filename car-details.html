@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details | EVolution</title>
+    <meta name="description" content="View detailed specifications, features, and pricing for electric vehicles. Compare and find your perfect EV.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> EVolution
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Electric Cars</a></li>
+                <li><a href="charging.html">Charging</a></li>
+                <li><a href="tips.html">EV Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="cars.html" class="btn btn-outline">Back to Cars</a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== DYNAMIC HERO SECTION ========== -->
+    <section class="car-details-hero">
+        <div class="container">
+            <h1 id="car-title">Loading Car Details...</h1>
+            <p id="car-subtitle">Premium Electric Vehicle</p>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <!-- Dynamic content will be loaded here by JavaScript -->
+            <div class="car-details-content">
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading car details...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-bolt"></i> EVolution
+                    </a>
+                    <p>Leading the electric vehicle revolution with premium cars and smart charging solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Electric Cars</a></li>
+                        <li><a href="charging.html">Charging Stations</a></li>
+                        <li><a href="tips.html">EV Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@evolution-ev.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                    </ul>
+                </div>
+                
+                <!-- Test Drive -->
+                <div class="footer-col">
+                    <h3>Schedule Test Drive</h3>
+                    <p>Experience electric driving firsthand</p>
+                    <a href="contact.html" class="btn btn-small">Book Now</a>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EVolution. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/carDetails.js"></script>
+</body>
+</html>

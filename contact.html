@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EVolution</title>
+    <meta name="description" content="Contact EVolution for electric vehicle inquiries, test drives, charging solutions, and expert consultation.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> EVolution
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Electric Cars</a></li>
+                <li><a href="charging.html">Charging</a></li>
+                <li><a href="tips.html">EV Guide</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <!-- Admin Dashboard Link -->
+                <li><a href="admin.html" class="admin-link">
+                    <i class="fas fa-chart-line"></i> Admin
+                </a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="tel:+15551234567" class="btn btn-outline">Call Now</a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our EV experts</p>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT INFORMATION SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Phone Card -->
+                <div class="contact-info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>Speak directly with our EV specialists</p>
+                    <div class="contact-detail">
+                        <h4>+1 (555) 123-4567</h4>
+                        <p>Available 8:00 AM - 8:00 PM EST</p>
+                    </div>
+                    <a href="tel:+15551234567" class="btn btn-primary">Call Now</a>
+                </div>
+                
+                <!-- Email Card -->
+                <div class="contact-info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>Send us your questions and inquiries</p>
+                    <div class="contact-detail">
+                        <h4>info@evolution-ev.com</h4>
+                        <p>Response within 24 hours</p>
+                    </div>
+                    <a href="mailto:info@evolution-ev.com" class="btn btn-primary">Send Email</a>
+                </div>
+                
+                <!-- Visit Card -->
+                <div class="contact-info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Showroom</h3>
+                    <p>Experience our EVs in person</p>
+                    <div class="contact-detail">
+                        <h4>123 Innovation Drive</h4>
+                        <p>Tech City, TC 12345</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a>
+                </div>
+            </div>
+            
+            <!-- Business Hours -->
+            <div class="contact-hours">
+                <h3><i class="far fa-clock"></i> Business Hours</h3>
+                <table class="hours-table">
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>10:00 AM - 4:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Test Drives</td>
+                        <td>By Appointment</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM SECTION ========== -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Send Us a Message</h2>
+            <p class="section-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
+            
+            <div class="form-container">
+                <form id="contact-form">
+                    <!-- Form Row 1: Name & Email -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required 
+                                   placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required 
+                                   placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    
+                    <!-- Form Row 2: Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" 
+                               placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <!-- Form Row 3: Subject -->
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" class="form-control" required>
+                            <option value="">Select a subject</option>
+                            <option value="test-drive">Schedule Test Drive</option>
+                            <option value="pricing">Pricing Inquiry</option>
+                            <option value="charging">Charging Questions</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="partnership">Business Partnership</option>
+                            <option value="new-car">Buy New Electric Car</option>
+                            <option value="used-car">Buy Used Electric Car</option>
+                            <option value="trade-in">Trade-In My Car</option>
+                            <option value="financing">Financing Options</option>
+                            <option value="maintenance">Maintenance Service</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Form Row 4: Message -->
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="6" required 
+                                  placeholder="Tell us about your EV needs..."></textarea>
+                    </div>
+                    
+                    <!-- Form Row 5: Newsletter -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for EV updates and special offers</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button & Loading -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div class="form-loading" id="form-loading">
+                            <i class="fas fa-spinner fa-spin"></i> Saving your inquiry...
+                        </div>
+                    </div>
+                    
+                    <!-- Success Message (Hidden by Default) -->
+                    <div class="form-success" id="form-success">
+                        <div class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Inquiry Submitted Successfully!</h4>
+                            <p>Thank you for contacting EVolution. Your request has been saved and our team will review it shortly.</p>
+                            <button type="button" id="send-another" class="btn btn-outline">
+                                <i class="fas fa-plus-circle"></i> Send Another Message
+                            </button>
+                            <a href="admin.html" class="btn btn-primary">
+                                <i class="fas fa-chart-line"></i> View All Inquiries
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEST DRIVE BANNER ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="test-drive-banner">
+                <h2>Ready for a Test Drive?</h2>
+                <p>Experience the future of driving with a personalized test drive</p>
+                <div class="cta-buttons">
+                    <a href="tel:+15551234567" class="btn btn-outline">Call to Schedule</a>
+                    <button id="schedule-online" class="btn btn-secondary">Schedule Online</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAP SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Find Our Showroom</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <img src="https://via.placeholder.com/1200x400/00d9ff/ffffff?text=Showroom+Map+Here" 
+                         alt="Showroom Location Map">
+                </div>
+                <div class="map-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City, TC 12345</p>
+                    <p><i class="fas fa-car"></i> Free parking available | <i class="fas fa-wheelchair"></i> Wheelchair accessible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-bolt"></i> EVolution
+                    </a>
+                    <p>Leading the electric vehicle revolution with premium cars and smart charging solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Electric Cars</a></li>
+                        <li><a href="charging.html">Charging Stations</a></li>
+                        <li><a href="tips.html">EV Guide</a></li>
+                        <li><a href="admin.html" class="admin-link">
+                            <i class="fas fa-chart-line"></i> Admin Dashboard
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@evolution-ev.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-col">
+                    <h3>24/7 Support</h3>
+                    <p>Emergency roadside assistance for all our EV customers</p>
+                    <a href="tel:+15551234567" class="btn btn-small">Emergency Assistance</a>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EVolution. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+</body>
+</html>

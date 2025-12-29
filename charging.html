@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charging Stations | EVolution</title>
+    <meta name="description" content="Find charging stations, compare charging types, and use our smart charging calculator to plan your EV journeys.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> EVolution
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Electric Cars</a></li>
+                <li><a href="charging.html" class="active">Charging</a></li>
+                <li><a href="tips.html">EV Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-outline">Find Station</a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Charging Network</h1>
+            <p>Find charging stations and learn about charging solutions</p>
+        </div>
+    </section>
+
+    <!-- ========== CHARGING TYPES SECTION ========== -->
+    <section class="section charging-types-section">
+        <div class="container">
+            <h2 class="section-title">Charging Types</h2>
+            <p class="section-subtitle">Choose the right charging solution for your needs</p>
+            
+            <div class="charging-types-grid">
+                <!-- Home Charging Card -->
+                <div class="charging-type-card home-charging">
+                    <div class="charging-type-icon">
+                        <i class="fas fa-home"></i>
+                        <div class="icon-badge">Most Popular</div>
+                    </div>
+                    <h3>Home Charging</h3>
+                    <p class="charging-type-subtitle">Convenient overnight charging</p>
+                    
+                    <div class="charging-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Power Output</span>
+                                <span class="spec-value">3.7 - 11 kW</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Full Charge Time</span>
+                                <span class="spec-value">6-12 hours</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Best For</span>
+                                <span class="spec-value">Daily Use</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="charging-description">Install a Level 2 charger at home for the most convenient and cost-effective charging experience.</p>
+                    
+                    <div class="charging-benefits">
+                        <span class="benefit-tag"><i class="fas fa-check-circle"></i> Lowest Cost</span>
+                        <span class="benefit-tag"><i class="fas fa-check-circle"></i> Overnight Ready</span>
+                    </div>
+                </div>
+                
+                <!-- Public Charging Card -->
+                <div class="charging-type-card public-charging">
+                    <div class="charging-type-icon">
+                        <i class="fas fa-building"></i>
+                        <div class="icon-badge">Widely Available</div>
+                    </div>
+                    <h3>Public Charging</h3>
+                    <p class="charging-type-subtitle">Accessible city & workplace charging</p>
+                    
+                    <div class="charging-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Power Output</span>
+                                <span class="spec-value">7 - 22 kW</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Full Charge Time</span>
+                                <span class="spec-value">3-8 hours</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Best For</span>
+                                <span class="spec-value">Work & Shopping</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="charging-description">Level 2 charging stations available at shopping centers, offices, and public parking areas.</p>
+                    
+                    <div class="charging-benefits">
+                        <span class="benefit-tag"><i class="fas fa-check-circle"></i> City Coverage</span>
+                        <span class="benefit-tag"><i class="fas fa-check-circle"></i> Top-Up Charging</span>
+                    </div>
+                </div>
+                
+                <!-- Fast Charging Card -->
+                <div class="charging-type-card fast-charging">
+                    <div class="charging-type-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <div class="icon-badge">Ultra Fast</div>
+                    </div>
+                    <h3>Fast Charging</h3>
+                    <p class="charging-type-subtitle">Quick charging for long trips</p>
+                    
+                    <div class="charging-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Power Output</span>
+                                <span class="spec-value">50 - 350 kW</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Charge to 80%</span>
+                                <span class="spec-value">15-45 min</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="spec-details">
+                                <span class="spec-label">Best For</span>
+                                <span class="spec-value">Road Trips</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="charging-description">DC fast charging stations located along highways for quick charging during long journeys.</p>
+                    
+                    <div class="charging-benefits">
+                        <span class="benefit-tag"><i class="fas fa-check-circle"></i> Highway Network</span>
+                        <span class="benefit-tag"><i class="fas fa-check-circle"></i> Quick Stop</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charging Types Footer -->
+            <div class="charging-types-footer">
+                <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> Most EVs support all three charging types. Fast charging is recommended for trips, while home charging is most economical for daily use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CHARGING MAP SECTION ========== -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Find Charging Stations</h2>
+            <p class="section-subtitle">Locate nearby charging stations in real-time</p>
+            
+            <div class="charging-map-container">
+                <!-- Map Legend -->
+                <div class="map-legend">
+                    <h3><i class="fas fa-map-marked-alt"></i> Legend</h3>
+                    <div class="legend-item">
+                        <span class="legend-icon" style="background-color: #00d9ff;"></span>
+                        <span>Level 2 Charging</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon" style="background-color: #7b61ff;"></span>
+                        <span>Fast DC Charging</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon" style="background-color: #ff6b35;"></span>
+                        <span>Ultra-Fast (350kW)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon" style="background-color: #4CAF50;"></span>
+                        <span>Free Public Charging</span>
+                    </div>
+                    
+                    <!-- Map Statistics -->
+                    <div class="map-stats">
+                        <h4><i class="fas fa-charging-station"></i> Nearby Stations</h4>
+                        <div class="stat-row">
+                            <span>Within 5 km:</span>
+                            <strong>24 stations</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Available now:</span>
+                            <strong>18 stations</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Fast charging:</span>
+                            <strong>12 stations</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Map -->
+                <div class="interactive-map">
+                    <!-- Map Controls -->
+                    <div class="map-controls">
+                        <button class="map-btn active" data-zoom="city" aria-label="City view">
+                            <i class="fas fa-map-marker-alt"></i> City View
+                        </button>
+                        <button class="map-btn" data-zoom="region" aria-label="Region view">
+                            <i class="fas fa-globe-americas"></i> Region View
+                        </button>
+                        <button class="map-btn" data-zoom="trip" aria-label="Trip planner">
+                            <i class="fas fa-route"></i> Trip Planner
+                        </button>
+                    </div>
+                    
+                    <!-- Map Visualization -->
+                    <div class="map-visualization" id="map-visualization">
+                        <!-- Station markers will be added by JavaScript -->
+                        <div class="station-marker" style="top: 30%; left: 25%;" data-type="fast">
+                            <i class="fas fa-bolt"></i>
+                            <div class="station-info">FastPoint #1<br>3/4 available</div>
+                        </div>
+                        <div class="station-marker" style="top: 45%; left: 40%;" data-type="ultra">
+                            <i class="fas fa-bolt"></i>
+                            <div class="station-info">PowerHub Ultra<br>2/6 available</div>
+                        </div>
+                        <div class="station-marker" style="top: 60%; left: 55%;" data-type="level2">
+                            <i class="fas fa-charging-station"></i>
+                            <div class="station-info">Mall Charging<br>8/12 available</div>
+                        </div>
+                        <div class="station-marker" style="top: 35%; left: 65%;" data-type="free">
+                            <i class="fas fa-charging-station"></i>
+                            <div class="station-info">Park & Charge<br>FREE</div>
+                        </div>
+                        <div class="station-marker" style="top: 70%; left: 35%;" data-type="fast">
+                            <i class="fas fa-bolt"></i>
+                            <div class="station-info">HighwayStop #2<br>1/4 available</div>
+                        </div>
+                        
+                        <!-- User location marker -->
+                        <div class="user-marker" style="top: 50%; left: 50%;">
+                            <i class="fas fa-user"></i>
+                            <div class="user-label">Your Location</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Search -->
+                    <div class="map-search">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search for charging stations..." id="station-search">
+                            <button class="btn btn-small">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Network Information -->
+            <div class="text-center" style="margin-top: 2rem;">
+                <div class="charging-network-info">
+                    <p><i class="fas fa-plug"></i> Connected to <strong>1,250+</strong> charging stations nationwide</p>
+                    <a href="#calculator" class="btn btn-outline">
+                        <i class="fas fa-calculator"></i> Calculate Your Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CHARGING CALCULATOR SECTION ========== -->
+    <section class="section" id="calculator">
+        <div class="container">
+            <h2 class="section-title">Smart Charging Calculator</h2>
+            <p class="section-subtitle">Estimate charging time, cost, and plan your trips</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-grid">
+                    <!-- Inputs Column -->
+                    <div class="calculator-inputs">
+                        <div class="calc-header">
+                            <h3><i class="fas fa-sliders-h"></i> Calculator Settings</h3>
+                            <p>Adjust the parameters to match your EV and charging preferences</p>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="battery-capacity">
+                                <i class="fas fa-car-battery"></i> Battery Capacity
+                                <span class="value-display" id="capacity-value">75 kWh</span>
+                            </label>
+                            <input type="range" id="battery-capacity" min="20" max="150" value="75" step="5">
+                            <div class="range-labels">
+                                <span>20 kWh</span>
+                                <span>150 kWh</span>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="current-charge">
+                                <i class="fas fa-battery-quarter"></i> Current Charge
+                                <span class="value-display" id="current-value">20%</span>
+                            </label>
+                            <input type="range" id="current-charge" min="0" max="100" value="20" step="5">
+                            <div class="range-labels">
+                                <span>0%</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="target-charge">
+                                <i class="fas fa-battery-full"></i> Target Charge
+                                <span class="value-display" id="target-value">80%</span>
+                            </label>
+                            <input type="range" id="target-charge" min="20" max="100" value="80" step="5">
+                            <div class="range-labels">
+                                <span>20%</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="charger-power">
+                                <i class="fas fa-tachometer-alt"></i> Charger Type
+                            </label>
+                            <select id="charger-power" class="styled-select">
+                                <option value="3.7">Level 1: 3.7 kW (Home - Basic)</option>
+                                <option value="7.4">Level 2: 7.4 kW (Home - Standard)</option>
+                                <option value="11">Level 2: 11 kW (Home/Public)</option>
+                                <option value="22">Level 2: 22 kW (Public)</option>
+                                <option value="50">DC Fast: 50 kW (Highway)</option>
+                                <option value="150" selected>DC Fast: 150 kW (Supercharger)</option>
+                                <option value="250">DC Fast: 250 kW (Ultra-fast)</option>
+                                <option value="350">DC Fast: 350 kW (Cutting-edge)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="electricity-rate">
+                                <i class="fas fa-money-bill-wave"></i> Electricity Rate
+                                <span class="value-display" id="rate-value">$0.15/kWh</span>
+                            </label>
+                            <input type="range" id="electricity-rate" min="0.05" max="0.50" value="0.15" step="0.01">
+                            <div class="range-labels">
+                                <span>$0.05</span>
+                                <span>$0.50</span>
+                            </div>
+                        </div>
+                        
+                        <button id="calculate-btn" class="btn btn-primary calculate-btn">
+                            <i class="fas fa-bolt"></i> Calculate Charging
+                        </button>
+                    </div>
+                    
+                    <!-- Results Column -->
+                    <div class="calculator-results">
+                        <div class="results-header">
+                            <h3><i class="fas fa-chart-bar"></i> Charging Analysis</h3>
+                            <div class="time-of-day">
+                                <span class="time-badge off-peak active">
+                                    <i class="fas fa-moon"></i> Off-Peak
+                                </span>
+                                <span class="time-badge peak">
+                                    <i class="fas fa-sun"></i> Peak
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="results-grid">
+                            <div class="result-card primary">
+                                <div class="result-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="result-content">
+                                    <span class="result-label">Energy Needed</span>
+                                    <strong class="result-value" id="energy-needed">45 kWh</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="result-card success">
+                                <div class="result-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="result-content">
+                                    <span class="result-label">Charging Time</span>
+                                    <strong class="result-value" id="charging-time">30 min</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="result-card warning">
+                                <div class="result-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="result-content">
+                                    <span class="result-label">Estimated Cost</span>
+                                    <strong class="result-value" id="charging-cost">$6.75</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="result-card info">
+                                <div class="result-icon">
+                                    <i class="fas fa-road"></i>
+                                </div>
+                                <div class="result-content">
+                                    <span class="result-label">Added Range</span>
+                                    <strong class="result-value" id="added-range">315 km</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Charging Visualization -->
+                        <div class="charging-visualization">
+                            <h4><i class="fas fa-chart-line"></i> Charging Progress</h4>
+                            <div class="charging-bar">
+                                <div class="current-charge-bar" style="width: 20%">
+                                    <span>20%</span>
+                                </div>
+                                <div class="target-charge-bar" style="width: 60%">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                            <div class="bar-labels">
+                                <span>Start</span>
+                                <span>Target</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Cost Comparison -->
+                        <div class="cost-comparison">
+                            <h4><i class="fas fa-gas-pump"></i> VS Gasoline Equivalent</h4>
+                            <div class="comparison-item">
+                                <span>EV Charging Cost:</span>
+                                <strong>$6.75</strong>
+                            </div>
+                            <div class="comparison-item">
+                                <span>Gasoline Cost (for 315 km):</span>
+                                <strong>$31.50</strong>
+                            </div>
+                            <div class="savings-badge">
+                                <i class="fas fa-piggy-bank"></i>
+                                You save: <strong>$24.75</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Calculator Notes -->
+                <div class="calculator-notes">
+                    <div class="note">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Note:</strong> Fast charging speeds decrease above 80% battery level to protect battery health. For daily use, charging to 80-90% is recommended.</p>
+                    </div>
+                    <div class="note">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Tip:</strong> Charging during off-peak hours (usually overnight) can reduce electricity costs by up to 50%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CHARGING COMPARISON TABLE ========== -->
+    <section class="section" style="background-color: var(--light-color);">
+        <div class="container">
+            <h2 class="section-title">Charging Speed Comparison</h2>
+            <p class="section-subtitle">Understand different charging levels and their typical use cases</p>
+            
+            <div class="charging-comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Charging Level</th>
+                            <th>Power Output</th>
+                            <th>Time for 100 km</th>
+                            <th>Full Charge Time*</th>
+                            <th>Typical Location</th>
+                            <th>Cost per kWh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Level 1 (Basic)</strong><br>120V AC</td>
+                            <td>1.4 - 1.9 kW</td>
+                            <td>8-12 hours</td>
+                            <td>40-50 hours</td>
+                            <td>Home Outlet</td>
+                            <td>$0.10 - $0.15</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Level 2 (Standard)</strong><br>240V AC</td>
+                            <td>3.7 - 22 kW</td>
+                            <td>2-5 hours</td>
+                            <td>6-12 hours</td>
+                            <td>Home/Work/Public</td>
+                            <td>$0.12 - $0.25</td>
+                        </tr>
+                        <tr class="highlighted">
+                            <td><strong>DC Fast (50kW)</strong><br>400V DC</td>
+                            <td>50 kW</td>
+                            <td>30-45 min</td>
+                            <td>1-2 hours</td>
+                            <td>Highway/Public</td>
+                            <td>$0.25 - $0.35</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DC Fast (150kW)</strong><br>800V DC</td>
+                            <td>150 kW</td>
+                            <td>15-20 min</td>
+                            <td>30-45 min</td>
+                            <td>Supercharger Network</td>
+                            <td>$0.30 - $0.45</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ultra-Fast (350kW)</strong><br>800V DC</td>
+                            <td>350 kW</td>
+                            <td>5-8 min</td>
+                            <td>15-20 min</td>
+                            <td>Latest Stations</td>
+                            <td>$0.35 - $0.55</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-note">*Based on 75 kWh battery capacity</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-bolt"></i> EVolution
+                    </a>
+                    <p>Leading the electric vehicle revolution with premium cars and smart charging solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Electric Cars</a></li>
+                        <li><a href="charging.html">Charging Stations</a></li>
+                        <li><a href="tips.html">EV Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@evolution-ev.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                    </ul>
+                </div>
+                
+                <!-- Charging Support -->
+                <div class="footer-col">
+                    <h3>Charging Support</h3>
+                    <p>24/7 charging assistance and station information</p>
+                    <a href="tel:+15551234567" class="btn btn-small">Call Support</a>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EVolution. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charging-calculator.js"></script>
+</body>
+</html>

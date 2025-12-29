@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | EVolution</title>
+    <meta name="description" content="Admin dashboard for managing customer inquiries and tracking EVolution website submissions.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> EVolution
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html" class="active">Admin Dashboard</a></li>
+                <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="clear-all-btn">
+                    <i class="fas fa-trash-alt"></i> Clear All
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== ADMIN DASHBOARD ========== -->
+    <section class="admin-dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1><i class="fas fa-chart-line"></i> Customer Inquiries Dashboard</h1>
+                <p>Manage and review all customer inquiries from EVolution website</p>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <i class="fas fa-inbox"></i>
+                        <h3 id="total-inquiries">0</h3>
+                        <p>Total Inquiries</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3 id="new-inquiries">0</h3>
+                        <p>New Today</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-car"></i>
+                        <h3 id="test-drive-requests">0</h3>
+                        <p>Test Drive Requests</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 id="contacted-inquiries">0</h3>
+                        <p>Contacted</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CONTROLS SECTION ========== -->
+            <div class="admin-controls">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search inquiries...">
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="new">New</button>
+                    <button class="filter-btn" data-filter="test-drive">Test Drive</button>
+                    <button class="filter-btn" data-filter="pricing">Pricing</button>
+                    <button class="filter-btn" data-filter="charging">Charging</button>
+                    <button class="filter-btn" data-filter="new-car">New Car</button>
+                    <button class="filter-btn" data-filter="used-car">Used Car</button>
+                    <button class="filter-btn" data-filter="contacted">Contacted</button>
+                </div>
+            </div>
+
+            <!-- ========== INQUIRIES TABLE ========== -->
+            <div class="inquiries-table-container">
+                <table class="inquiries-table">
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Contact</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inquiries-table-body">
+                        <!-- Data will be loaded here -->
+                        <tr id="empty-row">
+                            <td colspan="7">
+                                <div class="empty-state">
+                                    <i class="fas fa-inbox"></i>
+                                    <h3>No inquiries yet</h3>
+                                    <p>Customer inquiries from the contact form will appear here</p>
+                                    <button class="btn btn-primary" onclick="addTestInquiry()">
+                                        <i class="fas fa-plus"></i> Add Test Inquiry
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ========== INSTRUCTIONS SECTION ========== -->
+            <div class="card instructions-card">
+                <h4><i class="fas fa-info-circle"></i> How It Works</h4>
+                <ol>
+                    <li>Customers submit inquiries through the <a href="contact.html">Contact Form</a></li>
+                    <li>All data is saved locally in your browser's storage (localStorage)</li>
+                    <li>You can view, filter, search, and manage all inquiries here</li>
+                    <li>Click the eye icon to view full details of any inquiry</li>
+                </ol>
+            </div>
+            
+            <!-- ========== DEBUG TOOLS ========== -->
+            <div class="card debug-card">
+                <h4><i class="fas fa-bug"></i> Debug Tools</h4>
+                <div class="debug-buttons">
+                    <button class="btn btn-small" onclick="exportInquiries()">
+                        <i class="fas fa-download"></i> Export Data
+                    </button>
+                    <button class="btn btn-small" onclick="addTestInquiry()">
+                        <i class="fas fa-plus"></i> Add Test Data
+                    </button>
+                    <button class="btn btn-small" onclick="location.reload()">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button class="btn btn-small" onclick="console.log(JSON.parse(localStorage.getItem('evolution_inquiries') || '[]'))">
+                        <i class="fas fa-code"></i> Log to Console
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INQUIRY DETAIL MODAL ========== -->
+    <div class="modal-overlay" id="inquiry-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-user-circle"></i> Inquiry Details</h2>
+            </div>
+            <div class="modal-body">
+                <div class="detail-row">
+                    <div class="detail-label">Name:</div>
+                    <div class="detail-value" id="modal-name">-</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Email:</div>
+                    <div class="detail-value" id="modal-email">-</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Phone:</div>
+                    <div class="detail-value" id="modal-phone">-</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Subject:</div>
+                    <div class="detail-value" id="modal-subject">-</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Message:</div>
+                    <div class="detail-value" id="modal-message">-</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Date:</div>
+                    <div class="detail-value" id="modal-date">-</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Status:</div>
+                    <div class="detail-value">
+                        <select id="modal-status" class="form-control">
+                            <option value="new">New</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Newsletter:</div>
+                    <div class="detail-value" id="modal-newsletter">-</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="close-modal">Close</button>
+                <button class="btn btn-primary" id="save-status">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

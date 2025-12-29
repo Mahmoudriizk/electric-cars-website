@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Guide & Tips | EVolution</title>
+    <meta name="description" content="Complete electric vehicle guide with expert tips on charging, battery care, driving efficiency, and EV ownership FAQs.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> EVolution
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Electric Cars</a></li>
+                <li><a href="charging.html">Charging</a></li>
+                <li><a href="tips.html" class="active">EV Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-outline">Get Expert Advice</a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>EV Guide & Tips</h1>
+            <p>Everything you need to know about electric vehicles</p>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT SECTION ========== -->
+    <section class="section ev-guide-section">
+        <div class="container">
+            <!-- Guide Header with Stats -->
+            <div class="guide-header">
+                <h2 class="section-title">Ultimate EV Guide</h2>
+                <p class="section-subtitle">Master electric vehicle ownership with expert tips and insights</p>
+                
+                <div class="guide-stats">
+                    <div class="stat-box">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Up to 70%</h3>
+                        <p>Lower Fuel Costs</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-tools"></i>
+                        <h3>50% Less</h3>
+                        <p>Maintenance Costs</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-leaf"></i>
+                        <h3>100% Clean</h3>
+                        <p>Zero Tailpipe Emissions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== INTERACTIVE GUIDE NAVIGATION ========== -->
+            <div class="guide-navigation">
+                <div class="guide-tabs">
+                    <button class="guide-tab active" data-tab="getting-started">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Getting Started</span>
+                    </button>
+                    <button class="guide-tab" data-tab="charging">
+                        <i class="fas fa-charging-station"></i>
+                        <span>Charging</span>
+                    </button>
+                    <button class="guide-tab" data-tab="battery">
+                        <i class="fas fa-car-battery"></i>
+                        <span>Battery Care</span>
+                    </button>
+                    <button class="guide-tab" data-tab="driving">
+                        <i class="fas fa-car"></i>
+                        <span>Driving Tips</span>
+                    </button>
+                    <button class="guide-tab" data-tab="faq">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQs</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ========== TAB CONTENT CONTAINER ========== -->
+            <div class="guide-content">
+                <!-- Tab 1: Getting Started -->
+                <div class="tab-content active" id="getting-started">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-play-circle"></i> Getting Started with EVs</h3>
+                        <p class="tab-subtitle">Your journey to electric driving begins here</p>
+                    </div>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card featured">
+                            <div class="tip-icon">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h4>Understand Your Range Needs</h4>
+                            <p>Most modern EVs offer 250-400 km of range. Track your daily driving distance for a week to determine your needs.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4>Home Charging Setup</h4>
+                            <p>Install a Level 2 charger (7-11 kW) with a professional electrician. Consider smart chargers with scheduling features.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 8 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <h4>Financial Incentives</h4>
+                            <p>Check federal, state, and local incentives including tax credits up to $7,500, rebates, and reduced registration fees.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                            <h4>Test Drive Preparation</h4>
+                            <p>When test driving an EV, focus on: regenerative braking feel, acceleration response, and infotainment system.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pro-tip">
+                        <div class="pro-tip-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Pro Tip</h4>
+                        </div>
+                        <p>Consider your daily commute and access to charging at home or work. For most people, 300 km range is more than sufficient.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Charging -->
+                <div class="tab-content" id="charging">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-charging-station"></i> Smart Charging Practices</h3>
+                        <p class="tab-subtitle">Optimize your charging for efficiency and battery health</p>
+                    </div>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card featured">
+                            <div class="tip-icon">
+                                <i class="fas fa-battery-three-quarters"></i>
+                            </div>
+                            <h4>Charge to 80-90% for Daily Use</h4>
+                            <p>For daily driving, charging to 80-90% is better for battery health. Save 100% charges for long trips.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>Time Your Charging</h4>
+                            <p>Charge during off-peak hours (usually 11 PM - 6 AM) when electricity rates are lower.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-temperature-high"></i>
+                            </div>
+                            <h4>Temperature Considerations</h4>
+                            <p>Try to charge when temperatures are moderate. Extreme cold or heat can reduce charging efficiency by 15-25%.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4>Fast Charging Strategy</h4>
+                            <p>DC fast charging is best used for trips. Frequent use can accelerate battery degradation.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pro-tip">
+                        <div class="pro-tip-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Pro Tip</h4>
+                        </div>
+                        <p>Set your charging schedule to finish just before you leave home. This keeps the battery at optimal temperature.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Battery Care -->
+                <div class="tab-content" id="battery">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-car-battery"></i> Battery Longevity Tips</h3>
+                        <p class="tab-subtitle">Maximize your EV battery life with proper care</p>
+                    </div>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card featured">
+                            <div class="tip-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h4>Keep Charge Between 20-80%</h4>
+                            <p>Lithium-ion batteries last longest when kept between 20% and 80% charge.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-temperature-low"></i>
+                            </div>
+                            <h4>Manage Extreme Temperatures</h4>
+                            <p>Park in shade or garage during hot days. In cold weather, precondition while plugged in.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4>Long-Term Storage</h4>
+                            <p>If storing your EV, leave it at 50% charge in a cool, dry place. Check monthly.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty hard">Advanced</span>
+                                <span class="time"><i class="fas fa-clock"></i> 8 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h4>Limit Fast Charging</h4>
+                            <p>While convenient, frequent DC fast charging generates heat that can reduce battery lifespan.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pro-tip">
+                        <div class="pro-tip-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Pro Tip</h4>
+                        </div>
+                        <p>Modern EVs have advanced battery management systems. Don't stress too much - the car protects the battery automatically.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Driving Tips -->
+                <div class="tab-content" id="driving">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-car"></i> Efficient Driving Techniques</h3>
+                        <p class="tab-subtitle">Get the most range and enjoyment from your EV</p>
+                    </div>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card featured">
+                            <div class="tip-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Master Regenerative Braking</h4>
+                            <p>Use one-pedal driving when available. Anticipate stops to maximize energy recovery.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h4>Moderate Your Speed</h4>
+                            <p>Reducing speed from 120 to 100 km/h can increase range by 15-20%. Use cruise control on highways.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty easy">Beginner</span>
+                                <span class="time"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-snowflake"></i>
+                            </div>
+                            <h4>Smart Climate Control</h4>
+                            <p>Precondition cabin while plugged in. Use heated seats instead of full cabin heat - they use far less energy.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h4>Trip Planning Strategy</h4>
+                            <p>Plan routes with charging stops using apps like PlugShare. Charge before reaching 20% on trips.</p>
+                            <div class="tip-meta">
+                                <span class="difficulty medium">Intermediate</span>
+                                <span class="time"><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pro-tip">
+                        <div class="pro-tip-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Pro Tip</h4>
+                        </div>
+                        <p>The most efficient driving is smooth driving. Avoid rapid acceleration and hard braking to maximize your range.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 5: FAQ -->
+                <div class="tab-content" id="faq">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+                        <p class="tab-subtitle">Quick answers to common EV questions</p>
+                    </div>
+                    
+                    <!-- FAQ Search -->
+                    <div class="faq-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faq-search" placeholder="Search FAQs...">
+                    </div>
+                    
+                    <!-- FAQ Grid -->
+                    <div class="faq-grid">
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                <h4>How long do EV batteries last?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Most EV manufacturers offer 8-year/160,000 km battery warranties. Modern lithium-ion batteries are designed to last the lifetime of the vehicle, typically retaining 70-80% of their capacity after 8-10 years of normal use.</p>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Battery</span>
+                                    <span class="faq-tag">Longevity</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Is it safe to charge in the rain?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, EV charging equipment is IP-rated for weather resistance. Both the vehicle charge port and charging station connectors have multiple safety layers including automatic ground fault detection and isolation monitoring.</p>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Safety</span>
+                                    <span class="faq-tag">Charging</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How much does it cost to charge an EV?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Charging costs vary by location and electricity rates. On average, home charging costs about $0.12-$0.20 per kWh, which translates to $6-$12 for a full charge (300-500 km range).</p>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Cost</span>
+                                    <span class="faq-tag">Charging</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can I install solar panels to charge my EV?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Solar panels are an excellent complement to EV ownership. A typical home solar system can generate enough electricity to power both your home and your EV.</p>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Solar</span>
+                                    <span class="faq-tag">Renewable</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What maintenance does an EV require?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>EVs require significantly less maintenance than gasoline vehicles. There's no oil to change, no spark plugs, and fewer moving parts. Typical maintenance includes tire rotations, brake fluid checks, and cabin air filter replacement.</p>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Maintenance</span>
+                                    <span class="faq-tag">Cost</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== DOWNLOADABLE GUIDE ========== -->
+            <div class="download-guide">
+                <div class="download-content">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <h3>Download Complete EV Guide</h3>
+                        <p>Get our comprehensive 25-page guide with detailed information, checklists, and comparison tables.</p>
+                    </div>
+                    <a href="assets/pdfs/EVolution_Ultimate_EV_Guide.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download PDF (2.4 MB)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CALL TO ACTION SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Personalized Advice?</h2>
+                <p>Our EV experts can help you choose the right electric vehicle and charging solution for your lifestyle</p>
+                <a href="contact.html" class="btn btn-primary">Contact Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-bolt"></i> EVolution
+                    </a>
+                    <p>Leading the electric vehicle revolution with premium cars and smart charging solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Electric Cars</a></li>
+                        <li><a href="charging.html">Charging Stations</a></li>
+                        <li><a href="tips.html">EV Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@evolution-ev.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                    </ul>
+                </div>
+                
+                <!-- EV Resources -->
+                <div class="footer-col">
+                    <h3>EV Resources</h3>
+                    <p>Download our free EV buying guide</p>
+                    <a href="assets/pdfs/EVolution_Ultimate_EV_Guide.pdf" target="_blank" class="btn btn-small">Download Guide</a>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EVolution. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/ev-guide.js"></script>
+</body>
+</html>

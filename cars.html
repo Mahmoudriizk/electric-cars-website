@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Cars | EVolution</title>
+    <meta name="description" content="Explore our premium collection of electric vehicles. Filter by category, compare specifications, and find your perfect EV.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> EVolution
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html" class="active">Electric Cars</a></li>
+                <li><a href="charging.html">Charging</a></li>
+                <li><a href="tips.html">EV Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-outline">Book Test Drive</a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Electric Cars Collection</h1>
+            <p>Explore our premium selection of electric vehicles</p>
+        </div>
+    </section>
+
+    <!-- ========== FILTER SECTION ========== -->
+    <section class="section filter-section">
+        <div class="container">
+            <h2 class="section-title">Filter by Category</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-car"></i> All Cars
+                </button>
+                <button class="filter-btn" data-filter="sedan">
+                    <i class="fas fa-car-side"></i> Sedan
+                </button>
+                <button class="filter-btn" data-filter="suv">
+                    <i class="fas fa-truck"></i> SUV
+                </button>
+                <button class="filter-btn" data-filter="sports">
+                    <i class="fas fa-tachometer-alt"></i> Sports
+                </button>
+                <button class="filter-btn" data-filter="luxury">
+                    <i class="fas fa-crown"></i> Luxury
+                </button>
+            </div>
+            
+            <!-- Filter Info -->
+            <p class="filter-info" id="filter-info">
+                Showing all <span id="car-count">8</span> cars
+            </p>
+            
+            <!-- ========== SORTING OPTIONS ========== -->
+            <div class="sort-container">
+                <div class="sort-options">
+                    <span class="sort-label">
+                        <i class="fas fa-sort-amount-down"></i> Sort by:
+                    </span>
+                    <select id="sort-select" class="sort-select">
+                        <option value="default">Default Order</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="range-high">Range: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                    <button id="reset-sort" class="btn btn-small">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+                
+                <div class="sort-results">
+                    Showing <span id="sorted-count">8</span> of 8 cars
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CARS GRID SECTION ========== -->
+    <section class="section cars-section">
+        <div class="container">
+            <!-- Cars will be loaded dynamically with JavaScript -->
+            <div class="cars-grid" id="cars-container">
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading cars...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMPARISON TABLE SECTION ========== -->
+    <section class="section comparison-section">
+        <div class="container">
+            <h2 class="section-title">Compare Models</h2>
+            
+            <div class="table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Range</th>
+                            <th>0-100 km/h</th>
+                            <th>Max Power</th>
+                            <th>Fast Charge</th>
+                            <th>Starting Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tesla Model 3</td>
+                            <td>568 km</td>
+                            <td>3.1 s</td>
+                            <td>450 kW</td>
+                            <td>250 kW</td>
+                            <td>$42,990</td>
+                        </tr>
+                        <tr>
+                            <td>BMW iX</td>
+                            <td>630 km</td>
+                            <td>4.6 s</td>
+                            <td>385 kW</td>
+                            <td>200 kW</td>
+                            <td>$84,195</td>
+                        </tr>
+                        <tr>
+                            <td>Audi e-tron GT</td>
+                            <td>488 km</td>
+                            <td>3.3 s</td>
+                            <td>440 kW</td>
+                            <td>270 kW</td>
+                            <td>$104,900</td>
+                        </tr>
+                        <tr>
+                            <td>Mercedes EQS</td>
+                            <td>770 km</td>
+                            <td>4.3 s</td>
+                            <td>380 kW</td>
+                            <td>200 kW</td>
+                            <td>$104,400</td>
+                        </tr>
+                        <tr>
+                            <td>Ford Mustang Mach-E</td>
+                            <td>490 km</td>
+                            <td>3.5 s</td>
+                            <td>358 kW</td>
+                            <td>150 kW</td>
+                            <td>$42,895</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CALL TO ACTION SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Find Your Perfect EV</h2>
+                <p>Schedule a test drive to experience electric driving firsthand</p>
+                <a href="contact.html" class="btn btn-primary">Book Test Drive Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-bolt"></i> EVolution
+                    </a>
+                    <p>Leading the electric vehicle revolution with premium cars and smart charging solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Electric Cars</a></li>
+                        <li><a href="charging.html">Charging Stations</a></li>
+                        <li><a href="tips.html">EV Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@evolution-ev.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter Subscription -->
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates on new models and offers</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> EVolution. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
