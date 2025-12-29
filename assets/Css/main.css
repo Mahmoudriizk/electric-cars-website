@@ -206,8 +206,8 @@ p {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)),
-                url('../images/hero-bg.jpg') center/cover no-repeat;
+   background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)),
+            url('assets/images/hero-bg.jpg') center/cover no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
