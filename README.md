@@ -4,7 +4,7 @@ A multi-page frontend website focused on electric vehicles.
 The project provides car listings, detailed car pages, charging information, tips for EV users, and an admin panel UI.
 
 ## 🚀 Live Demo
-(Will be added after enabling GitHub Pages)
+https://mahmoudriizk.github.io/electric-cars-website/
 
 ## 🛠️ Technologies Used
 - HTML5
